@@ -1,0 +1,71 @@
+.no-padding-margin {
+	margin: 0px;
+	padding: 0px;
+}
+.button {
+	color: @primary-tx-color;
+	text-decoration: none;
+	padding: 0.75rem;
+	margin-top: 0.75rem;
+	background-color: @btn-bg-color;
+	border-radius: 2rem;
+	cursor: pointer;
+	transition: all 0.5s ease-in;
+	&:hover {
+		background-color: @btn-hover-color;
+	}
+}
+.contenedor {
+	padding: 1.2rem 0.75rem;
+	@media (min-width: @size[tablet]) {
+		padding: 3rem 4rem;
+	}
+}
+.titulos {
+	font-size: 1.5rem;
+	margin: 0.75rem auto;
+	text-align: center;
+}
+.fondo {
+	background-color: @secundary-tx-color;
+	color: #000;
+}
+
+.input {
+	box-sizing: border-box;
+	padding: 1.375rem 0.5rem 0.5rem;
+	height: 2.5rem;
+	width: 100%;
+}
+
+.input::placeholder {
+	visibility: hidden;
+	color: #00000000;
+}
+
+.input:focus {
+	outline: none;
+}
+
+.input__label {
+	position: absolute;
+	top: 1.375rem;
+	left: 0.5rem;
+	transition: all 0.25s;
+	color: @background;
+}
+
+.input:not(:placeholder-shown) + .input__label,
+.input:focus + .input__label {
+	font-size: 0.875rem;
+	top: 0.25rem;
+	transition: all 0.25s;
+}
+
+.input__tarea {
+	box-sizing: border-box;
+	border-radius: 7px;
+	width: 100%;
+	height: 200px;
+	min-height: 3rem;
+}

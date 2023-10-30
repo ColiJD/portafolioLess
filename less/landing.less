@@ -1,0 +1,235 @@
+.sobreMI {
+	.contenedor();
+	div {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		img {
+			background: url("https://placehold.co/600x400");
+			display: block;
+			width: 80%;
+			height: 300px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			border-radius: 100%;
+			@media (min-width: @size[phone]) {
+				width: 50%;
+			}
+		}
+		.sobre__personal {
+			p {
+				.no-padding-margin();
+			}
+			nav {
+				display: block;
+				width: 100%;
+				ul {
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-around;
+					align-items: center;
+
+					@media (min-width: @size[tablet]) {
+						justify-content: start;
+					}
+					.no-padding-margin();
+					li {
+						list-style: none;
+						.button();
+						@media (min-width: @size[tablet]) {
+							margin-right: 0.75rem;
+						}
+						a {
+							text-decoration: none;
+							color: @primary-tx-color;
+						}
+					}
+				}
+			}
+		}
+		@media (min-width: @size[tablet]) {
+			flex-direction: row-reverse;
+			.sobre__personal {
+				flex-direction: column;
+			}
+		}
+	}
+}
+.sobre_Mi {
+	.contenedor();
+	h2 {
+		.titulos();
+		.no-padding-margin();
+	}
+}
+.tarjeta {
+	.contenedor();
+	nav {
+		ul {
+			display: flex;
+			justify-content: space-around;
+			flex-wrap: wrap;
+			.no-padding-margin();
+			li {
+				width: 120px;
+				height: 130px;
+				background: @primary-tx-color;
+				display: flex;
+				flex-direction: column;
+				justify-content: end;
+				padding: 1rem;
+				text-align: left;
+				margin-bottom: 1.5rem;
+				transition: all 0.2s ease-in;
+
+				&:hover {
+					box-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
+					transform: scale(1.1);
+				}
+				img {
+					width: 2rem;
+					padding-bottom: 0.5rem;
+				}
+				h3 {
+					color: @background;
+					.no-padding-margin();
+					font-size: small;
+				}
+			}
+		}
+	}
+}
+.formacion {
+	.contenedor();
+	text-align: center;
+	div {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@media (min-width: @size[desktop]) {
+			flex-direction: row;
+		}
+		.formacion__contenedor {
+			width: 90%;
+			height: 280px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			background: @primary-tx-color;
+			color: @background;
+			margin: 0.5rem;
+			text-align: left;
+			transition: all 1s;
+			&:hover {
+				transform: scale(1.1);
+				border-radius: 2rem;
+			}
+			img {
+				width: 80%;
+				height: 50%;
+				object-fit: cover;
+			}
+
+			h3 {
+				font-weight: bold;
+			}
+		}
+	}
+}
+.experiencia {
+	.contenedor();
+	text-align: center;
+
+	div {
+		background-color: @secundary-tx-color;
+		color: @background;
+		display: flex;
+		flex-direction: column;
+		text-align: left;
+		margin-bottom: 0.75rem;
+		@media (min-width: @size[desktop]) {
+			flex-direction: row;
+			justify-content: space-around;
+			font-size: larger;
+		}
+		img {
+			width: 90%;
+			align-self: center;
+
+			@media (min-width: @size[desktop]) {
+				width: 60%;
+			}
+		}
+		.experiencia_info {
+			padding-left: 0.75rem;
+			padding-right: 0.75rem;
+
+			@media (min-width: @size[desktop]) {
+				flex-direction: column;
+			}
+		}
+
+		div {
+			a {
+				.button();
+				@media (min-width: @size[desktop]) {
+					margin-right: 0.75rem;
+				}
+			}
+		}
+	}
+}
+.formulario {
+	.contenedor();
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@media (min-width: @size[desktop]) {
+		justify-content: space-around;
+	}
+	img {
+		display: none;
+		@media (min-width: @size[desktop]) {
+			display: block;
+		}
+	}
+	.formulario__input {
+		position: relative;
+		margin-bottom: 1rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		box-sizing: border-box;
+	}
+
+	.input-message-error {
+		display: none;
+	}
+
+	.formulario__textarea {
+		position: relative;
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+	}
+
+	.botones {
+		input {
+			.button();
+		}
+		button {
+			.button();
+		}
+	}
+}
+
+.footer {
+	.contenedor();
+	text-align: center;
+	h4 {
+		font-size: 1.2rem;
+		font-weight: bold;
+		margin-bottom: 1rem;
+	}
+}

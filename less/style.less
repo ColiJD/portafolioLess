@@ -1,0 +1,40 @@
+@primary-bg-color: #c1e0f6;
+@primary-tx-color: #fff;
+@secundary-bg-color: #4ba9e5;
+@secundary-tx-color: #f1f8fe;
+@btn-bg-color: #248fd3;
+@btn-hover-color: #1571b4;
+@background: rgb(19, 90, 145);
+@gradiente: linear-gradient(0deg, rgba(19, 90, 145, 1) 0%, rgba(138, 199, 239, 1) 100%);
+
+@size: {
+	phone: 380px;
+	tablet: 760px;
+	desktop: 1024px;
+	widescreen: 1200px;
+};
+
+@size-prf: {
+	phone: s;
+	tablet: m;
+	desktop: l;
+	widescreen: xl;
+};
+
+@import "helpers.less";
+@import "burger.less";
+@import "landing.less";
+* {
+	box-sizing: border-box;
+}
+
+body {
+	.no-padding-margin();
+	background: @background;
+	background: @gradiente;
+	color: @primary-tx-color;
+
+	@media (min-width: @size[desktop]) {
+		font-size: larger;
+	}
+}
